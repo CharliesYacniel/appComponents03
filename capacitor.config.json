@@ -1,0 +1,7 @@
+{
+  "appId": "com.appComponentes.app",
+  "appName": "appComponentes",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www"
+}
