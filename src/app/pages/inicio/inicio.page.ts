@@ -28,16 +28,41 @@ export class InicioPage implements OnInit {
       name: 'Botones Y Router',
       redirectTo: '/botones'
     },
-    // {
-    //   icon: 'beaker',
-    //   name: 'Avatar',
-    //   redirectTo: '/avatar'
-    // },
-    // {
-    //   icon: 'beaker',
-    //   name: 'Avatar',
-    //   redirectTo: '/avatar'
-    // },
+    {
+      icon: 'card',
+      name: 'Cards',
+      redirectTo: '/card'
+    },
+    {
+      icon: 'bonfire',
+      name: 'CheckBox',
+      redirectTo: '/check'
+    },
+    {
+      icon: 'calendar',
+      name: 'dateTime',
+      redirectTo: '/date-time'
+    },
+    {
+      icon: 'car',
+      name: 'Fabs',
+      redirectTo: '/fab'
+    },
+    {
+      icon: 'grid',
+      name: 'Grid',
+      redirectTo: '/grid'
+    },
+    {
+      icon: 'infinite',
+      name: 'Infinite Scroll',
+      redirectTo: '/infinite-scroll'
+    },
+    {
+      icon: 'hammer',
+      name: 'Input y Forms',
+      redirectTo: '/input'
+    },
   ];
 
 
