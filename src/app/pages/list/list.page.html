@@ -1,0 +1,40 @@
+<app-header titulo="List"></app-header>
+
+<ion-content >
+  <ion-list #lista>
+    <ion-list-header>
+      Recent Conversations
+    </ion-list-header>
+
+    <ion-item-sliding id="" *ngFor="let user of users | async">
+    <ion-item >
+      <ion-avatar slot="start">
+        <img src="assets/img/stan-lee.jpg">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{user.name}}</h2>
+        <h3>{{user.email}}</h3>
+        <p>{{user.website}}</p>
+      </ion-label>
+      <ion-note slot="end">{{user.username}}</ion-note>
+    </ion-item>
+
+    <ion-item-options side="start">
+      <ion-item-option (click)="like(user)">
+        <ion-icon slot="icon-only" name="heart"></ion-icon>
+      </ion-item-option>
+    </ion-item-options>
+
+    <ion-item-options side="end">
+      <ion-item-option color="danger" (click)="delete(user)">
+        <ion-icon slot="icon-only" name="trash"></ion-icon>
+      </ion-item-option>
+      <ion-item-option>
+        <ion-icon slot="icon-only" name="star" (click)="favorit(user)"></ion-icon>
+      </ion-item-option>
+    </ion-item-options>
+  </ion-item-sliding>
+
+  </ion-list>
+ 
+</ion-content>

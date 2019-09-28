@@ -1,0 +1,16 @@
+<app-header titulo="List-Reorder"></app-header>
+
+<ion-content>
+
+  <ion-reorder-group (ionItemReorder)="doReorder($event)" disabled="false">
+    <ion-item *ngFor="let item of data">
+      <ion-label>{{item}}</ion-label>
+      <ion-reorder slot="end"></ion-reorder>
+    </ion-item>
+  </ion-reorder-group>
+
+<ion-button expand='full' (click)="guardar()">
+  Guardar lista
+</ion-button>
+
+</ion-content>
