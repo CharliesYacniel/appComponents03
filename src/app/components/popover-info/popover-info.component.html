@@ -1,0 +1,10 @@
+<ion-list>
+    <ion-list-header>Ionic</ion-list-header>
+    <ion-item  details 
+              *ngFor="let item of items; let i = index"
+              (click)="detailsItem(i+1)"
+              >
+      <ion-label>Item {{i+1}}</ion-label>
+    </ion-item>
+</ion-list>
+  <ion-button expand="block" (click)="dismissPopover()">Close</ion-button>

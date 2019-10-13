@@ -1,0 +1,26 @@
+import { Component, OnInit } from '@angular/core';
+import { DataService } from '../../service/data.service';
+
+@Component({
+  selector: 'app-search-bar',
+  templateUrl: './search-bar.page.html',
+  styleUrls: ['./search-bar.page.scss'],
+})
+export class SearchBarPage implements OnInit {
+  albumes: any[] = [];
+  textoBuscar = '';
+
+  constructor(private dataService: DataService) { }
+
+  ngOnInit() {
+    this.dataService.getAlbums().subscribe(data => {
+        //  console.log(data);
+         this.albumes = data;
+      });
+  }
+
+  buscar(event: any) {
+    this.textoBuscar = event.detail.value;
+  //  console.log(event);
+  }
+}

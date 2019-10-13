@@ -1,0 +1,36 @@
+<ion-header no-border translucent>
+  <ion-toolbar color="danger">
+      <ion-buttons slot="start">
+          <ion-back-button text="Regresar" defaultHref="/"></ion-back-button>
+        </ion-buttons>
+
+    <ion-title>popover</ion-title>
+
+
+    <ion-buttons slot="end">
+      <ion-button (click)="viewPopover()">
+        <ion-icon name='contact' slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+    <ion-button color="danger" expand="full" (click)="viewPopover()">
+        <ion-icon  name="contact" slot="start"></ion-icon>
+        <ion-label>Ver popover</ion-label>
+      </ion-button>
+</ion-content>
+
+<ion-footer >
+    <ion-toolbar color="danger"> 
+        <ion-buttons slot="start" (click)="viewPopover()">
+          <ion-icon name='contact' slot="icon-only"></ion-icon>
+        </ion-buttons>
+  
+      <ion-title>Footer</ion-title>
+ 
+    </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,30 @@
+<ion-header no-border translucent>
+    <ion-toolbar>
+  
+      <ion-buttons slot="start">
+        <ion-back-button text="Regresar" defaultHref="/"></ion-back-button>
+      </ion-buttons>
+  
+      <ion-title text-capitalize> Search Bar </ion-title>
+    </ion-toolbar>
+    <ion-searchbar 
+                  placeholder="Escribe algo"
+                  animated
+                  showCancelButton="focus"
+                  cancelButtonText="Cancelar"
+                  debounce="500"
+                  (ionChange)="buscar($event)"
+                  ></ion-searchbar>
+  </ion-header>
+
+<ion-content padding>
+  <!-- <ion-list-header>Albumes disponibles</ion-list-header> -->
+    <ion-list >
+        <ion-item  
+                *ngFor="let item of albumes | filtro: textoBuscar: 'title'"
+                  >
+          <ion-label>{{item.title}}</ion-label>
+        </ion-item>
+    </ion-list>
+
+</ion-content>

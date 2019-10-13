@@ -1,0 +1,34 @@
+<app-header titulo="Progress Bar and range"></app-header>
+
+<ion-content padding>
+<!-- Default Progressbar -->
+<!-- <ion-progress-bar></ion-progress-bar> -->
+
+<!-- Default Progressbar with 50 percent -->
+<!-- <ion-progress-bar value="0.5"></ion-progress-bar> -->
+
+<!-- Colorize Progressbar -->
+<!-- <ion-progress-bar color="primary" value="0.5"></ion-progress-bar> -->
+<!-- <ion-progress-bar color="secondary" value="0.5"></ion-progress-bar> -->
+
+<!-- Other types -->
+
+
+<!-- <ion-range min="0" max="1" color="secondary">
+    <ion-label slot="start">0</ion-label>
+    <ion-label slot="end">1</ion-label>
+  </ion-range> -->
+<ion-list>
+  <ion-item>
+  <ion-progress-bar color="secondary" [value]="porcentaje"  buffer="0.05"></ion-progress-bar>
+  </ion-item>
+  <ion-item>
+      <ion-range min="1" max="100" pin="true" color="danger" value="1" (ionChange)="cambioValor($event)">
+        <ion-icon size="small" slot="start" name="sunny"></ion-icon>
+        <ion-icon slot="end" name="sunny"></ion-icon>
+      </ion-range>
+  </ion-item>
+</ion-list>
+<!-- <ion-progress-bar type="indeterminate"></ion-progress-bar>
+<ion-progress-bar type="indeterminate" reversed="true"></ion-progress-bar> -->
+</ion-content>

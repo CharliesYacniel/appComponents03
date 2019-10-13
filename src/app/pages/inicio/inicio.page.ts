@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../../service/data.service';
+import {Componente} from '../../interfaces/interfaces';
 
+  import { from, Observable } from 'rxjs';
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.page.html',
@@ -7,89 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioPage implements OnInit {
 
-  componentes: Componente[] = [
-    {
-      icon: 'american-football',
-      name: 'Action Sheet',
-      redirectTo: '/action-sheet'
-    },
-    {
-      icon: 'appstore',
-      name: 'Alert',
-      redirectTo: '/alert'
-    },
-    {
-      icon: 'beaker',
-      name: 'Avatar',
-      redirectTo: '/avatar'
-    },
-    {
-      icon: 'hand',
-      name: 'Botones Y Router',
-      redirectTo: '/botones'
-    },
-    {
-      icon: 'card',
-      name: 'Cards',
-      redirectTo: '/card'
-    },
-    {
-      icon: 'bonfire',
-      name: 'CheckBox',
-      redirectTo: '/check'
-    },
-    {
-      icon: 'calendar',
-      name: 'dateTime',
-      redirectTo: '/date-time'
-    },
-    {
-      icon: 'car',
-      name: 'Fabs',
-      redirectTo: '/fab'
-    },
-    {
-      icon: 'grid',
-      name: 'Grid',
-      redirectTo: '/grid'
-    },
-    {
-      icon: 'infinite',
-      name: 'Infinite Scroll',
-      redirectTo: '/infinite-scroll'
-    },
-    {
-      icon: 'hammer',
-      name: 'Input y Forms',
-      redirectTo: '/input'
-    },
-    {
-      icon: 'list',
-      name: 'List',
-      redirectTo: '/list'
-    },
-    {
-      icon: 'reorder',
-      name: 'List Reorder',
-      redirectTo: '/list-reorder'
-    },
-    {
-      icon: 'refresh-circle',
-      name: 'Loading',
-      redirectTo: '/loading'
-    },
-  ];
+  componentes: Observable<Componente[]>;
 
 
-  constructor() { }
+  constructor(private dataService :DataService) { }
 
   ngOnInit() {
+    this.componentes = this.dataService.getOptMenu();
   }
 
 }
 
-interface Componente {
-  icon: string;
-  name: string;
-  redirectTo: string;
-}

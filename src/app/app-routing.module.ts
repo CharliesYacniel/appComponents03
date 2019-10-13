@@ -18,6 +18,12 @@ const routes: Routes = [
   { path: 'list', loadChildren: './pages/list/list.module#ListPageModule' },
   { path: 'list-reorder', loadChildren: './pages/list-reorder/list-reorder.module#ListReorderPageModule' },
   { path: 'loading', loadChildren: './pages/loading/loading.module#LoadingPageModule' },
+  { path: 'modal', loadChildren: './pages/modal/modal.module#ModalPageModule' },
+  { path: 'popover', loadChildren: './pages/popover/popover.module#PopoverPageModule' },
+  { path: 'progres-bar', loadChildren: './pages/progres-bar/progres-bar.module#ProgresBarPageModule' },
+  { path: 'refresher', loadChildren: './pages/refresher/refresher.module#RefresherPageModule' },
+  { path: 'search-bar', loadChildren: './pages/search-bar/search-bar.module#SearchBarPageModule' },
+  // { path: 'modal-info', loadChildren: './pages/modal-info/modal-info.module#ModalInfoPageModule' },
 ];
 
 @NgModule({
