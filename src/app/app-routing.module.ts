@@ -23,6 +23,8 @@ const routes: Routes = [
   { path: 'progres-bar', loadChildren: './pages/progres-bar/progres-bar.module#ProgresBarPageModule' },
   { path: 'refresher', loadChildren: './pages/refresher/refresher.module#RefresherPageModule' },
   { path: 'search-bar', loadChildren: './pages/search-bar/search-bar.module#SearchBarPageModule' },
+  { path: 'segment', loadChildren: './pages/segment/segment.module#SegmentPageModule' },
+  { path: 'slide', loadChildren: './pages/slide/slide.module#SlidePageModule' },
   // { path: 'modal-info', loadChildren: './pages/modal-info/modal-info.module#ModalInfoPageModule' },
 ];
 

@@ -100,24 +100,9 @@
       "redirectTo": "/segment"
     },
     {
-      "icon": "rose",
-      "name": "Skeleton Text",
-      "redirectTo": "/skeleton"
-    },
-    {
       "icon": "sunny",
       "name": "Slides",
       "redirectTo": "/slide"
-    },
-    {
-      "icon": "water",
-      "name": "Slide Pane",
-      "redirectTo": "/slide-pane"
-    },
-    {
-      "icon": "logo-angular",
-      "name": "Tabs",
-      "redirectTo": "/tabs"
     },
     {
       "icon": "logo-playstation",

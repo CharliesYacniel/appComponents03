@@ -21,7 +21,7 @@ import { PipesModule } from './pipes/pipes.module';
     AppRoutingModule,
     ComponentsModule,
     HttpClientModule,
-    PipesModule 
+    PipesModule,
   ],
   providers: [
     StatusBar,
